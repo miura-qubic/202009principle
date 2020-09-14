@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 /* @media screen and (min-width:1440px) {} */
 /* @media screen and (min-width:1280px) and ( max-width:1439px) {} */
 /* @media screen and (min-width:769px) and ( max-width:1279px) {} */
@@ -6,16 +7,16 @@
 /* @media screen and (min-width:769px) and ( max-width:1025px) {} */
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ベース設定 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 html{
-	color: ;
-	font-size:;
+	color: var(--blue);
+	font-size: 16px;
 	/*font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;*/
 	/*font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;*/
-	/*font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;*/
-	line-height: ;
+	font-family: '小塚ゴシック Pro','Kozuka Gothic Pro',sans-serif;
+	line-height: 1.8;
 }
 a{
-	color: ;
+	color: var(--blue);
 	display: block;
 }
 #wrapper{
@@ -23,23 +24,26 @@ a{
 	max-width: 1920px;
 	margin: 0 auto;
 	height: auto;
+	overflow: hidden;
 }
 section,
 .section{
+	min-width: 1280px;
 	width: 100%;
 	height: auto;
 	position: relative;
 }
 .container{
-	width: 90%;
+	width: 1280px;
+	padding: 0 50px;
 	margin: 0 auto;
 }
-@media screen and (min-width:1540px) {
+/* @media screen and (min-width:1540px) {
 	.container{max-width: 1480px;}
 }
 @media screen and (min-width:1280px) and ( max-width:1539px) {
 	.container{max-width: 1280px;}
-}
+} */
 @media screen and (min-width:768px) and ( max-width:1279px) {
 	.container{max-width: none;}
 }
@@ -50,7 +54,8 @@ section,
 	.is_tab{display: block;}
 } 
 :root{
-	--colorname: ;
+	--blue: #1d1f88;
+	--yellow: #fff100;
 }
 .objectCover {
 	width:100%;
@@ -73,19 +78,243 @@ section,
 	overflow: hidden;
 }
 .preload * { transition: none !important; }
+@font-face{
+	font-family: 'din';
+	src:url('../fonts/DIN Condensed Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.din{ font-family: 'din', sans-serif; }
+.firasans{ font-family: 'Fira Sans', sans-serif; }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ベース設定 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+.ttl_wrap{
+	position: relative;
+	display: inline-block;
+}
+.ttl_wrap .fig{
+	position: absolute;
+	width: 28rem;
+	height: auto;
+	bottom: -3.5rem;
+	left: -13rem;
+	z-index: 1;
+}
+.ttl_wrap .ttl{
+	position: absolute;
+	top: 50%;
+	left: -3.5rem;
+	transform: translateY(-50%);
+	width: 100%;
+	white-space: nowrap;
+	text-align: center;
+	color: rgba(255,255,255,.67);
+	font-size: 4.6rem;
+	z-index: 2;
+}
+.ttl_wrap p{
+	position: relative;
+	font-size: 1.3rem;
+	z-index: 3;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+
+header .header_in{
+	display: flex;
+	align-items: center;
+	padding: 3rem 3rem 1rem;
+}
+header .logo{
+	min-width: 5rem;
+	width: 5rem;
+	margin-right: 1.5rem;
+}
+header .logo img{
+	width: 100%;
+	height: auto;
+}
+header .header_in .company_name{
+	font-size: 1.2rem;
+	color: var(--yellow);
+}
+header .header_in nav ul{
+	display: flex;
+}
+header .header_in nav ul li{
+	margin-right: 1rem;
+}
+header .header_in nav li a{
+	position: relative;
+	background: var(--yellow);
+	padding: 0.5rem 1rem;
+	width: 10rem;
+	transform: skewX(-10deg);
+	text-align: center;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+header .header_in nav li a span{
+	display: inline-block;
+	transform: skewX(10deg);
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top01{
+	padding: 0 0 4rem;
+}
+.top01 .box{
+	padding: 1rem;
+	border: solid 10px var(--yellow);
+	transform: skewX(-10deg);
+	width: 90%;
+	min-width: 1280px;
+	max-width: 1480px;
+	margin: 0 auto;
+}
+.top01 .box_in{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: var(--yellow);
+	height: 40rem;
+}
+.top01 .box_in .txt{
+	transform: skewX(10deg);
+	margin-top: 5%;
+}
+.top01 .box_in .txt h2{
+	width: 57%;
+}
+.top01 .box_in .txt p{
+	font-size: 1.1rem;
+}
+.top01 .box_in .img01{
+	position: absolute;
+	bottom: 1.5rem;
+	right:  -7%;
+	max-width: 67rem;
+	width: 73%;
+	transform: skewX(10deg);
+}
+
+.top01 .img_wrap{
+	position: relative;
+	max-width: 1480px;
+	min-width: 1280px;
+	width: 90%;
+	display: flex;
+	align-items: flex-end;
+	margin: -8rem auto 0;
+	z-index: 2;
+}
+.top01 .img_wrap .img{
+	width: auto;
+	height: 16rem;
+	margin-left: -1.5rem;
+	transition: .3s;
+}
+.top01 .img_wrap .img:first-of-type{
+	margin-left: -5.5rem;
+}
+.top01 .img_wrap .img img{
+	width: auto;
+	height: 16rem;
+}
+.top01 .img_wrap .img.small{
+	height: 14rem;
+}
+.top01 .img_wrap .img.small img{
+	height: 14rem;
+}
+.top01 .box03{
+	margin-top: 4rem;
+}
+.top01 .box03 .sub_ttl{
+	position: relative;
+	display: inline-block;
+}
+.top01 .box03 .sub_ttl::before{
+	position: absolute;
+	content: '';
+	background: rgba(255,241,0,.27);
+	width: 100%;
+	height: 3rem;
+	top: 0.25rem;
+	right: -3.5rem;
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.top01 .box03 .sub_ttl::after{
+	position: absolute;
+	content: '';
+	background: var(--yellow);
+	width: 500%;
+	height: 3rem;
+	top: 2rem;
+	right: 0;
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.top01 .box03 .sub_ttl h3{
+	font-size: 2.6rem;
+	letter-spacing: 0.1rem;
+}
+.top01 .box03 .txt{
+	margin-top: 2rem;
+}
+.top01 .box03 .txt h4{
+	font-size: 1.8rem;
+	line-height: 1.4;
+	color: #000;
+}
+.top01 .box03 .txt p{
+	font-size: 1.2rem;
+	letter-spacing: 0.1rem;
+}
+.top01 .box03 h4 span{ color: var(--blue); }
+@media screen and (min-width:769px) and ( max-width:1279px) {
+	.top01 .img_wrap .img:first-of-type{
+		margin-left: 0;
+	}
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02 .box{
+	background: var(--yellow);
+	padding: 3rem 0;
+	transform: skewX(-10deg);
+}
+.top02 .box .ttl_wrap,
+.top02 .box .txt{
+	transform: skewX(10deg);
+}
+.top02 .box .txt{
+	position: relative;
+	margin-top: 1.5rem;
+	z-index: 3;
+}
+.top02 .box .txt h3{
+	font-size: 1.4rem;
+	font-weight: normal;
+	margin-bottom: 1rem;
+}
+.top02 .box .txt h3 span{
+	font-size: 1.7rem;
+}
+.top02 .box .txt p{
+	font-size: 1.1rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
