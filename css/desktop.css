@@ -35,7 +35,7 @@ section,
 }
 .container{
 	width: 1280px;
-	padding: 0 50px;
+	padding: 0 100px;
 	margin: 0 auto;
 }
 /* @media screen and (min-width:1540px) {
@@ -171,27 +171,53 @@ header .header_in nav li a span{
 	padding: 0 0 4rem;
 }
 .top01 .box{
+	position: relative;
+}
+.top01 .box_in{
+	position: relative;
 	padding: 1rem;
 	border: solid 10px var(--yellow);
 	transform: skewX(-10deg);
 	width: 90%;
-	min-width: 1280px;
+	/* min-width: 1280px; */
 	max-width: 1480px;
 	margin: 0 auto;
+	z-index: 1;
 }
-.top01 .box_in{
+.top01 .box .fig{
+	position: absolute;
+	height: 150%;
+	top: -50%;
+	right: 75%;
+	transform: skewX(-10deg);
+	border-right: solid 10px var(--blue);
+	padding-right: 1rem;
+	z-index: -1;
+}
+.top01 .box .fig_in{
+	width: 25rem;
+	height: 100%;
+	background: var(--blue);
+}
+.top01 .box_in .item{
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: flex-start;
 	background: var(--yellow);
 	height: 40rem;
+	z-index: 1;
 }
 .top01 .box_in .txt{
+	width: 100%;
 	transform: skewX(10deg);
 	margin-top: 5%;
+	padding: 0 0 0 3rem;
 }
 .top01 .box_in .txt h2{
+	max-width: 750px;
+	/* min-width: 620px; */
 	width: 57%;
 }
 .top01 .box_in .txt p{
@@ -200,10 +226,11 @@ header .header_in nav li a span{
 .top01 .box_in .img01{
 	position: absolute;
 	bottom: 1.5rem;
-	right:  -7%;
-	max-width: 67rem;
-	width: 73%;
-	transform: skewX(10deg);
+	/* right:  5%; */
+	left: 50%;
+	max-width: 70rem;
+	width: 88%;
+	transform: translateX(calc(-50% + 17rem)) skewX(10deg);
 }
 
 .top01 .img_wrap{
@@ -214,7 +241,7 @@ header .header_in nav li a span{
 	display: flex;
 	align-items: flex-end;
 	margin: -8rem auto 0;
-	z-index: 2;
+	z-index: 3;
 }
 .top01 .img_wrap .img{
 	width: auto;
@@ -235,14 +262,14 @@ header .header_in nav li a span{
 .top01 .img_wrap .img.small img{
 	height: 14rem;
 }
-.top01 .box03{
+.top01 .box02{
 	margin-top: 4rem;
 }
-.top01 .box03 .sub_ttl{
+.top01 .box02 .sub_ttl{
 	position: relative;
 	display: inline-block;
 }
-.top01 .box03 .sub_ttl::before{
+.top01 .box02 .sub_ttl::before{
 	position: absolute;
 	content: '';
 	background: rgba(255,241,0,.27);
@@ -253,7 +280,7 @@ header .header_in nav li a span{
 	transform: skewX(-10deg);
 	z-index: -1;
 }
-.top01 .box03 .sub_ttl::after{
+.top01 .box02 .sub_ttl::after{
 	position: absolute;
 	content: '';
 	background: var(--yellow);
@@ -264,23 +291,23 @@ header .header_in nav li a span{
 	transform: skewX(-10deg);
 	z-index: -1;
 }
-.top01 .box03 .sub_ttl h3{
+.top01 .box02 .sub_ttl h3{
 	font-size: 2.6rem;
 	letter-spacing: 0.1rem;
 }
-.top01 .box03 .txt{
+.top01 .box02 .txt{
 	margin-top: 2rem;
 }
-.top01 .box03 .txt h4{
+.top01 .box02 .txt h4{
 	font-size: 1.8rem;
 	line-height: 1.4;
 	color: #000;
 }
-.top01 .box03 .txt p{
+.top01 .box02 .txt p{
 	font-size: 1.2rem;
 	letter-spacing: 0.1rem;
 }
-.top01 .box03 h4 span{ color: var(--blue); }
+.top01 .box02 h4 span{ color: var(--blue); }
 @media screen and (min-width:769px) and ( max-width:1279px) {
 	.top01 .img_wrap .img:first-of-type{
 		margin-left: 0;
@@ -289,14 +316,27 @@ header .header_in nav li a span{
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02{
+	/* transform: skewX(-10deg); */
+}
 .top02 .box{
+	position: relative;
+	padding: 4rem 0;
+	/* background: var(--yellow); */
+	/* transform: skewX(10deg); */
+}
+.top02 .box::before{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
 	background: var(--yellow);
-	padding: 3rem 0;
+	top: 0;
+	left: -14%;
 	transform: skewX(-10deg);
 }
 .top02 .box .ttl_wrap,
 .top02 .box .txt{
-	transform: skewX(10deg);
 }
 .top02 .box .txt{
 	position: relative;
@@ -313,6 +353,13 @@ header .header_in nav li a span{
 }
 .top02 .box .txt p{
 	font-size: 1.1rem;
+}
+.top02 .img{
+	position: absolute;
+	bottom: -6rem;
+	left: 55%;
+	width: 83%;
+	max-width: 1250px;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
