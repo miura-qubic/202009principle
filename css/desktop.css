@@ -113,10 +113,16 @@ section,
 	font-size: 4.6rem;
 	z-index: 2;
 }
+.ttl_wrap.blue .ttl{
+	color: rgba(29,31,136,.15);
+}
 .ttl_wrap p{
 	position: relative;
 	font-size: 1.3rem;
 	z-index: 3;
+}
+.ttl_wrap.white p{
+	color: #fff;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -184,7 +190,7 @@ header .header_in nav li a span{
 	margin: 0 auto;
 	z-index: 1;
 }
-.top01 .box .fig{
+.top01 .box .bluebox{
 	position: absolute;
 	height: 150%;
 	top: -50%;
@@ -194,7 +200,7 @@ header .header_in nav li a span{
 	padding-right: 1rem;
 	z-index: -1;
 }
-.top01 .box .fig_in{
+.top01 .box .bluebox_in{
 	width: 25rem;
 	height: 100%;
 	background: var(--blue);
@@ -269,27 +275,25 @@ header .header_in nav li a span{
 	position: relative;
 	display: inline-block;
 }
-.top01 .box02 .sub_ttl::before{
-	position: absolute;
-	content: '';
-	background: rgba(255,241,0,.27);
-	width: 100%;
-	height: 3rem;
-	top: 0.25rem;
-	right: -3.5rem;
-	transform: skewX(-10deg);
-	z-index: -1;
-}
+.top01 .box02 .sub_ttl::before,
 .top01 .box02 .sub_ttl::after{
 	position: absolute;
 	content: '';
-	background: var(--yellow);
-	width: 500%;
 	height: 3rem;
-	top: 2rem;
-	right: 0;
 	transform: skewX(-10deg);
 	z-index: -1;
+}
+.top01 .box02 .sub_ttl::before{
+	background: rgba(255,241,0,.27);
+	width: 100%;
+	top: 0.25rem;
+	right: -3.5rem;
+}
+.top01 .box02 .sub_ttl::after{
+	background: var(--yellow);
+	width: 500%;
+	top: 2rem;
+	right: 0;
 }
 .top01 .box02 .sub_ttl h3{
 	font-size: 2.6rem;
@@ -335,8 +339,20 @@ header .header_in nav li a span{
 	left: -14%;
 	transform: skewX(-10deg);
 }
-.top02 .box .ttl_wrap,
-.top02 .box .txt{
+.top02 .box .bluebox{
+	position: absolute;
+	height: 300%;
+	bottom: 28%;
+	left: 70%;
+	transform: skewX(-10deg);
+	border-left: solid 10px var(--blue);
+	padding-left: 1rem;
+	z-index: -1;
+}
+.top02 .box .bluebox_in{
+	width: 28rem;
+	height: 100%;
+	background: var(--blue);
 }
 .top02 .box .txt{
 	position: relative;
@@ -357,11 +373,245 @@ header .header_in nav li a span{
 .top02 .img{
 	position: absolute;
 	bottom: -6rem;
-	left: 55%;
+	left: 57%;
 	width: 83%;
 	max-width: 1250px;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ02 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top03{
+	padding: 6rem 0 4rem;
+}
+.top03 .ttl_wrap .fig{
+	width: 35rem;
+}
+.top03 .item{
+	position: relative;
+	width: 75%;
+	height: 100%;
+	margin-top: 3rem;
+}
+.top03 .item :first-of-type{
+	margin-top: 0;
+}
+.top03 .item:nth-of-type(even){
+	margin-left: auto;
+}
+.top03 .item .bluebox{
+	position: absolute;
+	background: var(--blue);
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.top03 .item:first-of-type .bluebox{
+	bottom: -6rem;
+	left: -21%;
+	width: 67.5%;
+	height: 160%;
+}
+.top03 .item:nth-of-type(2) .bluebox{
+	bottom: 3rem;
+	left: -38%;
+	width: 250%;
+	height: 8rem;
+}
+.top03 .item .yellowbox,
+.top03 .item .yellowbox02{
+	position: absolute;
+	background: var(--yellow);
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.top03 .item:nth-of-type(2) .yellowbox{
+	bottom: 8rem;
+	left: -100%;
+	width: 220%;
+	height: 8rem;
+}
+.top03 .item:nth-of-type(3) .yellowbox{
+	height: 5rem;
+	bottom: 4rem;
+	left: -100%;
+	width: 150%;
+}
+.top03 .item:nth-of-type(3) .yellowbox02{
+	height: 5rem;
+	top: 50%;
+	right: -100%;
+	transform: translateY(-50%) translateY(1.5rem) skewX(-10deg);
+	width: 80%;
+}
+.top03 .item .bg{
+	position: relative;
+	transform: skewX(-10deg);
+	height: 31rem;
+	overflow: hidden;
+}
+.top03 .item .bg::before{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, .5);
+	z-index: 2;
+}
+.top03 .item .bg::after{
+	position: absolute;
+	content: '';
+	width: 95%;
+	height: 95%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background: rgba(255, 255, 255, .4);
+	z-index: 2;
+}
+.top03 .item .bg img{
+	width: 100%;
+	height: auto;
+	transform: skewX(10deg) scale(1.2);
+}
+.top03 .item .txt{
+	position: absolute;
+	top: 50%;
+	left: 12%;
+	transform: translateY(-50%);
+	width: 75%;
+	z-index: 4;
+}
+.top03 .item:first-of-type .txt{
+	width: 70%;
+}
+.top03 .item:nth-of-type(3) .txt{
+	transform: translateY(-50%) translateY(-6rem);
+}
+.top03 .item .txt h3{
+	position: relative;
+	display: inline-block;
+	font-size: 1.4rem;
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+}
+.top03 .item .txt h3::before{
+	position: absolute;
+	content: '';
+	background: #fff;
+	height: 3.5rem;
+	top: 50%;
+	transform: translateY(-50%) translateY(0.9rem) skewX(-10deg);
+	z-index: -1;
+}
+.top03 .item:first-of-type .txt h3::before{
+	width: 35rem;
+	left: -2.95rem;
+}
+.top03 .item:nth-of-type(2) .txt h3::before{
+	width: 32rem;
+	left: -3.65rem;
+}
+.top03 .item:nth-of-type(3) .txt h3::before{
+	width: 20rem;
+	left: -3.4rem;
+}
+.top03 .item .txt h3 .num{
+	font-size: 4rem;
+	font-weight: 600;
+	line-height: 1;
+	margin-right: 1rem;
+}
+.top03 .item h4{
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+.top03 .item li{
+	list-style: disc;
+	margin-left: 1rem;
+}
+.top03 .item .txt_in{
+	margin: 2rem auto 0;
+	background: rgba(255, 255, 255, .5);
+	padding: 1rem 1.5rem;
+	width: 23rem;
+}
+.top03 .item .txt_in .txt_in01,
+.top03 .item .txt_in .txt_in02{
+	font-size: 0.9rem;
+}
+.top03 .item .txt_in .txt02 .indent5{
+	padding-left: 5em;
+	text-indent: -5em;
+}
+.top03 .item .txt_in .txt02 .txt_r{
+	text-align: right;
+}
+.top03 .item .txt02{
+	position: absolute;
+	color: #fff;
+	background: var(--blue);
+	width: 48rem;
+	margin-right: -100%;
+	padding: 1.5rem 3rem;
+	bottom: 2.5%;
+	left: 50%;
+	transform: skewX(-10deg);
+}
+.top03 .item .txt02 h4,
+.top03 .item .txt02 ul{
+	transform: skewX(10deg);
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ04 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top04{
+	padding: 4rem 0;
+}
+.top04 .ttl_wrap .fig{ left: -8rem; }
+.top04 .box{
+	margin-top: 5rem;
+}
+.top04 .sub_ttl{
+	position: relative;
+	padding-left: 4rem;
+	font-size: 1.6rem;
+}
+.top04 .sub_ttl::before,
+.top04 .sub_ttl::after{
+	position: absolute;
+	content: '';
+	height: 3rem;
+	transform: skewX(10deg);
+	z-index: -1;
+}
+.top04 .sub_ttl::before{
+	background: rgba(255,241,0,.27);
+	top: -1rem;
+	left: 0;
+	width: 9rem;
+}
+.top04 .sub_ttl::after{
+	background: var(--yellow);
+	top: 1rem;
+	left: 3rem;
+	width: 25rem;
+}
+.top04 .sub_ttl .ttl{
+	display: flex;
+	align-items: center;
+	line-height: 1;
+}
+.top04 .sub_ttl .ttl span{
+	display: inline-block;
+	font-size: 1rem;
+	margin-left: 1rem;
+}
+.top04 .box_in{
+	margin-top: 6rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
