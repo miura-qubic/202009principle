@@ -320,14 +320,9 @@ header .header_in nav li a span{
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-.top02{
-	/* transform: skewX(-10deg); */
-}
 .top02 .box{
 	position: relative;
 	padding: 4rem 0;
-	/* background: var(--yellow); */
-	/* transform: skewX(10deg); */
 }
 .top02 .box::before{
 	position: absolute;
@@ -397,6 +392,16 @@ header .header_in nav li a span{
 }
 .top03 .item:nth-of-type(even){
 	margin-left: auto;
+}
+.top03 .item:first-of-type .img01{
+	position: absolute;
+	bottom: 2rem;
+	right: -20.5rem;
+	width: 29rem;
+}
+.top03 .item:first-of-type .img01 img{
+	width: 100%;
+	height: auto;
 }
 .top03 .item .bluebox{
 	position: absolute;
@@ -571,30 +576,34 @@ header .header_in nav li a span{
 }
 .top04 .ttl_wrap .fig{ left: -8rem; }
 .top04 .box{
-	margin-top: 5rem;
+	margin-top: 6rem;
 }
 .top04 .sub_ttl{
 	position: relative;
 	padding-left: 4rem;
 	font-size: 1.6rem;
+	margin-top: 5rem;
+}
+.top04 .sub_ttl:first-of-type{
+	margin-top: 0;
 }
 .top04 .sub_ttl::before,
 .top04 .sub_ttl::after{
 	position: absolute;
 	content: '';
-	height: 3rem;
+	height: 2.25rem;
 	transform: skewX(10deg);
 	z-index: -1;
 }
 .top04 .sub_ttl::before{
 	background: rgba(255,241,0,.27);
-	top: -1rem;
+	top: -0.75rem;
 	left: 0;
 	width: 9rem;
 }
 .top04 .sub_ttl::after{
 	background: var(--yellow);
-	top: 1rem;
+	top: 0.75rem;
 	left: 3rem;
 	width: 25rem;
 }
@@ -609,9 +618,274 @@ header .header_in nav li a span{
 	margin-left: 1rem;
 }
 .top04 .box_in{
-	margin-top: 6rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+.top04 .item{
+	width: 48.5%;
+	border: solid 5px var(--yellow);
+	padding: 0.5rem;
+	margin-top: 0.75rem;
+}
+.top04 .item.blue{
+	border: solid 5px var(--blue);
+}
+.top04 .item:nth-of-type(-n+2){
+	margin-top: 0;
+}
+.top04 .item_in{
+	position: relative;
+	background: rgba(255,241,0,.18);
+	padding: 1.75rem 1.5rem;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.top04 .item.blue .item_in{
+	background: var(--blue);
+}
+.top04 .item_in .img{
+	position: absolute;
+	top: 50%;
+	left: -2.75rem;
+	transform: translateY(-50%) translateY(0.5rem);
+	width: auto;
+	height: 13rem;
+}
+.top04 .item.blue .item_in .img{
+	height: 15rem;
+	transform: translateY(-50%) translateY(2.5rem);
+}
+.top04 .item_in .img img{
+	width: auto;
+	height: 13rem;
+}
+.top04 .item.blue .item_in .img img{
+	height: 15rem;
+}
+.top04 .item_in .txt{
+	width: 79%;
+	margin-left: auto;
+}
+.top04 .item.blue .item_in .txt{
+	color: #fff;
+}
+.top04 .item_in .txt h4{
+	font-size: 1.05rem;
+	line-height: 1.6;
+}
+.top04 .item_in .txt h4 span{
+	font-size: 0.95rem;
+}
+.top04 .item_in .txt p{
+	font-size: 0.85rem;
+	font-weight: bold;
+	margin-top: 0.2rem;
+}
+.top04 .item_in .btn_wrap{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+.top04 .item_in .btn_wrap a{
+	font-size: 0.9rem;
+	font-weight: 500;
+	padding: 0.6rem 0.75rem;
+	text-align: center;
+	width: 49%;
+	margin-top: 0.35rem;
+	transition: .3s;
+}
+.top04 .item_in .btn_wrap a:nth-of-type(-n+2){
+	margin-top: 0;
+}
+.top04 .item_in .btn_wrap a.amazon{
+	color: #000;
+	background: #ffb541;
+}
+.top04 .item_in .btn_wrap a.yahoo{
+	color: #fff;
+	background: #e51f1c;
+}
+.top04 .item_in .btn_wrap a.base{
+	color: #fff;
+	background: #22c6a6;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ05 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top05{
+	background: var(--yellow);
+	padding: 5rem 0;
+	z-index: 1;
+}
+.top05 .ttl_wrap .fig{
+	width: 30rem;
+	bottom: -3.1rem;
+	left: -6rem;
+}
+.top05 .box{
+	margin-top: 6rem;
+	text-align: center;
+}
+.top05 .sub_ttl{
+	position: relative;
+	display: inline-block;
+	padding: 0 4rem;
+	font-size: 1.6rem;
+}
+.top05 .sub_ttl::before,
+.top05 .sub_ttl::after{
+	position: absolute;
+	content: '';
+	height: 2.25rem;
+	transform: skewX(10deg);
+	z-index: -1;
+}
+.top05 .sub_ttl::before{
+	background: rgba(255,255,255,.67);
+	top: -0.75rem;
+	left: 18rem;
+	width: 9rem;
+}
+.top05 .sub_ttl::after{
+	background: rgba(255,255,255,.64);
+	top: 0.75rem;
+	left: 0;
+	width: 25rem;
+}
+.top05 .sub_ttl .ttl{
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	line-height: 1;
+}
+.top05 .box_in{
+	display: flex;
+	justify-content: center;
+	margin-top: 4rem;
+}
+.top05 .box_in:first-of-type{
+	margin-top: 0;
+}
+.top05 .item{
+	text-align: center;
+	margin-right: 2%;
+}
+.top05 .item .img_wrap{
+	width: 80%;
+	height: 10rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto 1rem;
+	transform: translateX(0.5rem);
+}
+.top05 .item .img_wrap .img{
+	/* width: 100%; */
+}
+.top05 .item .img_wrap .img img{
+	width: 100%;
+	height: auto;
+}
+.top05 .item .txt{
+	background: var(--blue);
+	transform: skewX(-10deg);
+	margin-top: auto;
+}
+.top05 .item .txt_in{
+	transform: skewX(10deg);
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 20rem;
+	height: 7rem;
+}
+.top05 .item .txt_in h4{
+	font-size: 1.1rem;
+}
+.top05 .item .txt_in p{
+	font-size: 0.9rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top06{
+	background: var(--blue);
+	padding: 5rem 0;
+	z-index: 1;
+}
+.top06 .ttl_wrap .ttl{
+	color: rgba(255,255,255,.15);
+}
+.top06 .ttl_wrap .fig{
+	width: 38rem;
+}
+.top06 .box{
+	margin-top: 6rem;
+	text-align: center;
+}
+.top06 .sub_ttl{
+	position: relative;
+	display: inline-block;
+	padding: 0 4rem;
+	font-size: 1.6rem;
+}
+.top06 .sub_ttl::before,
+.top06 .sub_ttl::after{
+	position: absolute;
+	content: '';
+	height: 2.25rem;
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.top06 .sub_ttl::before{
+	background: rgba(255,255,255,.65);
+	top: -0.75rem;
+	left: 18rem;
+	width: 9rem;
+}
+.top06 .sub_ttl::after{
+	background: rgba(255,255,255,.21);
+	top: 0.75rem;
+	left: 0;
+	width: 25rem;
+}
+.top06 .sub_ttl .ttl{
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	line-height: 1;
+	color: #fff;
+}
+.top06 .box{
+	margin-top: 4rem;
+}
+.top06 .box .swiper-slide{
+	margin: 0 auto;
+}
+.top06 .box .swiper-slide .txt{
+	background: #fff;
+	transform: translateX(1rem) skewX(-10deg);
+	margin-top: -2rem;
+}
+.top06 .box .swiper-slide .txt_in{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 20rem;
+	height: 7rem;
+	transform: scaleX(10deg);
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
