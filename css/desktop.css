@@ -124,10 +124,48 @@ section,
 .ttl_wrap.white p{
 	color: #fff;
 }
+#pagetop{
+	position: fixed;
+	display: none;
+	bottom: 2rem;
+	right: -1rem;
+	width: 12rem;
+	transform: skewX(-10deg);
+	z-index: 60001;
+}
+#pagetop .box{
+	position: relative;
+	background: rgba(255,241,0,.9);
+	padding: 0.75rem 2.5rem;
+}
+#pagetop .box::after{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,.9);
+	top: 0.5rem;
+	left: 0.5rem;
+	z-index: -1;
+}
+#pagetop p{
+	display: inline-block;
+	line-height: 1.5;
+	transform: skewX(10deg);
+	font-weight: 600;
+}
+#pagetop p span{
+	display: inline-block;
+	width: 1.5rem;
+	margin-right: 0.5rem;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
-
+header{
+	position: relative;
+	z-index: 55000;
+}
 header .header_in{
 	display: flex;
 	align-items: center;
@@ -161,6 +199,21 @@ header .header_in nav li a{
 	text-align: center;
 	font-size: 0.9rem;
 	font-weight: bold;
+	transition: .3s;
+}
+header .header_in nav li a::before{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 100%;
+	background: #fff;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%) translateX(0.25rem) translateY(0.25rem);
+	transition: .3s;
+}
+header .header_in nav li a:hover::before{
+	width: 100%;
 }
 header .header_in nav li a span{
 	display: inline-block;
@@ -169,7 +222,65 @@ header .header_in nav li a span{
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ ナビ ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
- 
+footer{
+	background: var(--blue);
+	padding: 3rem 0;
+}
+footer .footer_in{
+	display: flex;
+	align-items: flex-end;
+	padding: 0 3rem;
+}
+footer .logo{
+	min-width: 7.5rem;
+	width: 7.5rem;
+	margin-right: 1.5rem;
+}
+footer .logo img{
+	width: 100%;
+	height: auto;
+}
+footer .footer_in nav ul{
+	display: flex;
+}
+footer .footer_in nav ul li{
+	margin-right: 1rem;
+}
+footer .footer_in nav li a{
+	position: relative;
+	background: var(--yellow);
+	padding: 0.5rem 1rem;
+	width: 10rem;
+	transform: skewX(-10deg);
+	text-align: center;
+	font-size: 0.9rem;
+	font-weight: bold;
+}
+footer .footer_in nav li a::before{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 100%;
+	background: #fff;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%) translateX(0.25rem) translateY(0.25rem);
+	transition: .3s;
+}
+footer .footer_in nav li a:hover::before{
+	width: 100%;
+}
+footer .footer_in nav li a span{
+	display: inline-block;
+	transform: skewX(10deg);
+}
+footer .copyright{
+	font-size: 1.2rem;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	margin-top: 1.5rem;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ フッター ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -269,7 +380,7 @@ header .header_in nav li a span{
 	height: 14rem;
 }
 .top01 .box02{
-	margin-top: 4rem;
+	padding-top: 4rem;
 }
 .top01 .box02 .sub_ttl{
 	position: relative;
@@ -669,20 +780,24 @@ header .header_in nav li a span{
 	width: 79%;
 	margin-left: auto;
 }
-.top04 .item.blue .item_in .txt{
+.top04 .item.blue .item_in .txt > a{
 	color: #fff;
 }
-.top04 .item_in .txt h4{
+.top04 .item_in .txt a h4{
 	font-size: 1.05rem;
 	line-height: 1.6;
 }
 .top04 .item_in .txt h4 span{
 	font-size: 0.95rem;
 }
-.top04 .item_in .txt p{
+.top04 .item_in .txt a p{
 	font-size: 0.85rem;
 	font-weight: bold;
 	margin-top: 0.2rem;
+}
+.top04 .item_in .txt a:hover h4,
+.top04 .item_in .txt a:hover p{
+	text-decoration: underline;
 }
 .top04 .item_in .btn_wrap{
 	display: flex;
@@ -698,6 +813,7 @@ header .header_in nav li a span{
 	width: 49%;
 	margin-top: 0.35rem;
 	transition: .3s;
+	overflow: hidden;
 }
 .top04 .item_in .btn_wrap a:nth-of-type(-n+2){
 	margin-top: 0;
@@ -713,6 +829,16 @@ header .header_in nav li a span{
 .top04 .item_in .btn_wrap a.base{
 	color: #fff;
 	background: #22c6a6;
+}
+.top04 .item_in .btn_wrap a.amazon:hover{
+	background: #ffce80;
+}
+.top04 .item_in .btn_wrap a.yahoo:hover{
+	background: #ff221f;
+}
+.top04 .item_in .btn_wrap a.base:hover{
+	color: #000;
+	background: #00e6b8;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -815,7 +941,7 @@ header .header_in nav li a span{
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ05 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
-/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ06 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top06{
 	background: var(--blue);
 	padding: 5rem 0;
@@ -867,8 +993,39 @@ header .header_in nav li a span{
 .top06 .box{
 	margin-top: 4rem;
 }
+.top06 .box .swiper-wrapper{
+	margin-bottom: 4rem;
+}
 .top06 .box .swiper-slide{
 	margin: 0 auto;
+}
+.top06 .swiper-slide-prev,
+.top06 .swiper-slide-next{
+	transform: scale(0.8);
+	opacity: 0.6;
+}
+.top06 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
+	margin: 0 6px;
+}
+.top06 .swiper-pagination-bullet{
+	background: rgba(255,255,255,.4);
+}
+.top06 .swiper-pagination-bullet-active{
+	background: #fff;
+}
+.top06 .swiper-button-prev,
+.top06 .swiper-button-next{
+	width: 3.5rem;
+	height: 3.5rem;
+	top: 38%;
+}
+.top06 .swiper-button-prev{
+	background: url(../images/common/ancle_left.png) center center / cover no-repeat!important;
+	left: 26%;
+}
+.top06 .swiper-button-next{
+	background: url(../images/common/ancle_right.png) center center / cover no-repeat!important;
+	right: 26%;
 }
 .top06 .box .swiper-slide .txt{
 	background: #fff;
@@ -883,11 +1040,158 @@ header .header_in nav li a span{
 	justify-content: center;
 	width: 20rem;
 	height: 7rem;
-	transform: scaleX(10deg);
 }
-/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+.top06 .box .swiper-slide .txt_in p{
+	transform: skewX(10deg);
+	font-size: 0.8rem;
+	line-height: 1.6;
+}
+.top06 .box .swiper-slide .txt_in h4{
+	position: relative;
+	transform: skewX(10deg);
+	font-size: 1.1rem;
+}
+.top06 .box .swiper-slide .txt_in .fig{
+	position: absolute;
+	width: 23rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) translateX(2em);
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ06 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ07 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top07{
+	padding: 5rem 0;
+}
+.top07 .ttl_wrap .fig{
+	width: 27rem;
+	left: -9rem;
+}
+.top07 .box{
+	position: relative;
+	margin-top: 4rem;
+	border: solid 5px var(--yellow);
+	background: #fff;
+	padding: 2rem 3.5rem 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.top07 .box .item{
+	width: 48%;
+	padding: 0.75rem 0;
+	border-top: solid 3px var(--blue);
+}
+.top07 .box .item:nth-of-type(-n+2){
+	border-top: none;
+}
+.top07 .box .item p{
+	font-size: 0.9rem;
+}
+.top07 .sns_wrap{
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+.top07 .sns_wrap .item{
+	width: 32.5%;
+}
+.top07 .sns_wrap .item .img{
+	border: solid 5px var(--blue);
+	background: #fff;
+}
+.top07 .sns_wrap .item .img img{
+	width: 100%;
+	height: auto;
+}
+.top07 .bluebox,
+.top07 .yellowbox{
+	position: absolute;
+	width: 170%;
+	height: 8em;
+	top: 50%;
+	z-index: -1;
+}
+.top07 .bluebox{
+	left: -50%;
+	transform: translateY(-50%) translateY(5rem) skewX(-10deg);
+	background: var(--blue);
+}
+.top07 .yellowbox{
+	right: -50%;
+	transform: translateY(-50%) translateY(1.5rem) skewX(-10deg);
+	background: var(--yellow);
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ07 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ08 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top08{
+	background: var(--yellow);
+	padding: 5rem 0;
+}
+.top08 .box{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5rem;
+}
+.top08 .box .l_box{
+	width: 58%;
+}
+.top08 .box .company{
+	display: flex;
+	align-items: flex-start;
+	margin-top: 0.75rem;
+	border-bottom: solid 5px var(--blue);
+}
+.top08 .box .l_box .company:last-of-type{
+	border-bottom: none;
+}
+.top08 .box .company .ttl,
+.top08 .box .company .txt{
+	font-size: 0.8rem;
+	padding: 0.75rem 1.5rem;
+	text-align: left;
+}
+.top08 .box .company .ttl{
+	position: relative;
+	width: 10rem;
+	color: #fff;
+	background: var(--blue);
+	white-space: nowrap;
+	z-index: 1;
+}
+.top08 .box .company .ttl::after{
+	position: absolute;
+	content: '';
+	width: 2rem;
+	height: 100%;
+	top: 0;
+	right: -0.5rem;
+	background: var(--blue);
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.top08 .box .company .txt{
+	width: 100%;
+	padding-left: 3rem;
+}
+.top08 .box .r_box{
+	width: 40%;
+}
+.top08 .box .r_box .map{
+	border: solid 1px #707070;
+	background: #fff;
+	padding: 1.5rem;
+	margin-top: 0.75rem;
+}
+.top08 .box .r_box .map iframe{
+	width: 100%;
+	height: 20rem;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ08 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 下層共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
-
