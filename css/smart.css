@@ -175,6 +175,7 @@ header .logo img{
 }
 header .header_in .company_name{
 	font-size: 0.7rem;
+	font-weight: bold;
 	color: var(--yellow);
 	line-height: 1.4;
 }

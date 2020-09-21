@@ -159,6 +159,40 @@ section,
 	width: 1.5rem;
 	margin-right: 0.5rem;
 }
+.btn_wrap{
+	display: flex;
+	justify-content: space-between;
+}
+.btn_wrap a{
+	font-size: 0.9rem;
+	font-weight: 500;
+	padding: 0.6rem 0.75rem;
+	text-align: center;
+	width: 10rem;
+	transition: .3s;
+}
+.btn_wrap a.amazon{
+	color: #000;
+	background: #ffb541;
+}
+.btn_wrap a.yahoo{
+	color: #fff;
+	background: #e51f1c;
+}
+.btn_wrap a.base{
+	color: #fff;
+	background: #22c6a6;
+}
+.btn_wrap a.amazon:hover{
+	background: #ffce80;
+}
+.btn_wrap a.yahoo:hover{
+	background: #ff221f;
+}
+.btn_wrap a.base:hover{
+	color: #000;
+	background: #00e6b8;
+}
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ 共通 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ ナビ ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
@@ -182,6 +216,7 @@ header .logo img{
 }
 header .header_in .company_name{
 	font-size: 1.2rem;
+	font-weight: bold;
 	color: var(--yellow);
 }
 header .header_in nav ul{
@@ -804,45 +839,16 @@ footer .copyright{
 	text-decoration: underline;
 }
 .top04 .item_in .btn_wrap{
-	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
 	margin-top: 1rem;
 }
 .top04 .item_in .btn_wrap a{
-	font-size: 0.9rem;
-	font-weight: 500;
-	padding: 0.6rem 0.75rem;
-	text-align: center;
 	width: 49%;
 	margin-top: 0.35rem;
-	transition: .3s;
 	overflow: hidden;
 }
 .top04 .item_in .btn_wrap a:nth-of-type(-n+2){
 	margin-top: 0;
-}
-.top04 .item_in .btn_wrap a.amazon{
-	color: #000;
-	background: #ffb541;
-}
-.top04 .item_in .btn_wrap a.yahoo{
-	color: #fff;
-	background: #e51f1c;
-}
-.top04 .item_in .btn_wrap a.base{
-	color: #fff;
-	background: #22c6a6;
-}
-.top04 .item_in .btn_wrap a.amazon:hover{
-	background: #ffce80;
-}
-.top04 .item_in .btn_wrap a.yahoo:hover{
-	background: #ff221f;
-}
-.top04 .item_in .btn_wrap a.base:hover{
-	color: #000;
-	background: #00e6b8;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ04 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -1196,6 +1202,158 @@ footer .copyright{
 	height: 20rem;
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ08 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
+
+/* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ product01 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.product01{
+	padding: 4rem 0 8rem;
+}
+.product01 .ttl_wrap .ttl{
+	color: rgba(255, 255, 255, .15);
+}
+.product01 .box{
+	position: relative;
+	margin-top: 8rem;
+	padding: 6rem 4rem 4rem;
+	border: solid 11px var(--yellow);
+	background: #fff;
+}
+.product01 .box .bluebox{
+	position: absolute;
+	height: 300%;
+	bottom: 15%;
+	right: 52%;
+	transform: skewX(-10deg);
+	border-right: solid 10px var(--blue);
+	padding-right: 1rem;
+	z-index: -1;
+}
+.product01 .box .bluebox_in{
+	width: 40rem;
+	height: 100%;
+	background: var(--blue);
+}
+.product01 .box .yellowbox{
+	position: absolute;
+	height: 300%;
+	top: 15%;
+	left: 60%;
+	transform: skewX(-10deg);
+	border-left: solid 10px var(--yellow);
+	padding-left: 1rem;
+	z-index: -1;
+}
+.product01 .box .yellowbox_in{
+	width: 43rem;
+	height: 100%;
+	background: var(--yellow);
+}
+.product01 .ttlbox{
+	position: absolute;
+	text-align: center;
+	background: var(--yellow);
+	padding: 1rem;
+	top: -5rem;
+	left: 50%;
+	transform: translateX(-50%) skewX(-10deg);
+	width: 50%;
+}
+.product01 .ttlbox h2{
+	font-size: 1.2rem;
+	transform: skewX(10deg);
+}
+.product01 .ttlbox h2 span{
+	display: inline-block;
+	font-size: 1.1rem;
+	line-height: 1.4;
+}
+.product01 .box_in{
+	display: flex;
+	justify-content: space-between;
+}
+.product01 .box_in .img{
+	width: 27%;
+}
+.product01 .box_in .txt{
+	width: 71%;
+}
+.product01 .box_in .txt h3{
+	font-size: 1.4rem;
+}
+.product01 .box_in .txt h4{
+	font-size: 1.1rem;
+	margin: 2rem 0 0.5rem;
+}
+.product01 .box_in .txt p{
+	font-size: 1.1rem;
+}
+.product01 .box_in .txt li{
+	list-style: disc;
+	margin-left: 1em;
+	font-size: 1.1rem;
+}
+.product01 .box_in .btn_wrap{
+	margin-top: 1rem;
+}
+.product01 .box_in .btn_wrap a{
+	width: 32.5%;
+}
+.product01 .box_in .txt .notice{
+	margin-top: 2rem;
+}
+.product01 .box_in .txt .notice p{
+	font-size: 1rem;
+	line-height: 2;
+}
+.product01 .detail_box{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 3rem;
+}
+.product01 .detail_box .l_box{
+	width: 55%;
+}
+.product01 .detail_box .detail{
+	display: flex;
+	align-items: flex-start;
+	margin-top: 0.75rem;
+	border-bottom: solid 5px var(--blue);
+}
+.product01 .detail_box .l_box .detail:last-of-type{
+	border-bottom: none;
+}
+.product01 .detail_box .detail .ttl,
+.product01 .detail_box .detail .txt{
+	font-size: 0.8rem;
+	padding: 0.75rem 1.5rem;
+	text-align: left;
+}
+.product01 .detail_box .detail .ttl{
+	position: relative;
+	width: 12.5rem;
+	color: #fff;
+	background: var(--blue);
+	white-space: nowrap;
+	z-index: 1;
+}
+.product01 .detail_box .detail .ttl::after{
+	position: absolute;
+	content: '';
+	width: 2rem;
+	height: 100%;
+	top: 0;
+	right: -0.5rem;
+	background: var(--blue);
+	transform: skewX(-10deg);
+	z-index: -1;
+}
+.product01 .detail_box .detail .txt{
+	width: 100%;
+	padding-left: 3rem;
+}
+.product01 .detail_box .r_box{
+	width: 40%;
+}
+/* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ product01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ 下層共通 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
  
