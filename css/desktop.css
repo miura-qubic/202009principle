@@ -467,6 +467,9 @@ footer .copyright{
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ01 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
+.top02 .ttl_wrap .fig{
+	left: -16rem;
+}
 .top02 .box{
 	position: relative;
 	padding: 4rem 0;
@@ -524,6 +527,9 @@ footer .copyright{
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ03 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top03{
 	padding: 6rem 0 4rem;
+}
+.top03 .ttl_wrap .ttl{
+	color: rgba(255, 255, 255, .23);
 }
 .top03 .ttl_wrap .fig{
 	width: 35rem;
@@ -1141,6 +1147,10 @@ footer .copyright{
 .top08{
 	background: var(--yellow);
 	padding: 5rem 0;
+}
+.top08 .ttl_wrap .fig{
+	width: 36rem;
+	left: -9rem;
 }
 .top08 .box{
 	display: flex;
