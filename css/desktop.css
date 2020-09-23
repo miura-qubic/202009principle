@@ -1016,13 +1016,11 @@ footer .copyright{
 	transform: scale(0.8);
 	transition: .6s;
 	margin: 0 auto;
+	opacity: 0.6;
 }
 .top06 .swiper-slide-active{
 	transform: scale(1)!important;
-}
-.top06 .swiper-slide-prev,
-.top06 .swiper-slide-next{
-	opacity: 0.6;
+	opacity: 1!important;
 }
 .top06 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{
 	margin: 0 6px;
