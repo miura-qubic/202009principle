@@ -21,6 +21,7 @@ $(function () {
 
 	// JQueryの範囲
 
+	// トップへ戻るボタン：フッター前までスクロールしたら固定
 	$(window).on('scroll', function() {
 		if ($(this).scrollTop() > 500) {
 				$('#pagetop').fadeIn('fast');
@@ -29,7 +30,27 @@ $(function () {
 				$('#pagetop').fadeOut('fast');
 				$('header').removeClass('active');
 		}
+		var scrollHeight = $(document).height();
+		var scrollPosition = $(window).height() + $(window).scrollTop();
+		var footHeight = $('footer').innerHeight();
+		if ( scrollHeight - scrollPosition <= footHeight && w <= spwidth) {
+			$('#pagetop').css({
+				'position': 'absolute',
+				'bottom': footHeight - 35
+			});
+		} else {
+			$('#pagetop').css({
+				'position': 'fixed',
+				'bottom': '1.5rem'
+			});
+		}
 	});
+	$('#pagetop').click(function () {
+		$('body,html').animate({
+		scrollTop: 0
+		}, 400);
+		return false;
+});
 	$('header nav li a').on('click',function(){
 		$('header nav').removeClass('active');
 		$('header .menu_open').removeClass('active');
