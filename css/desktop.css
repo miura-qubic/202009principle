@@ -1219,6 +1219,9 @@ footer .copyright{
 .product01{
 	padding: 4rem 0 8rem;
 }
+.product01 .ttl_wrap .fig{
+	left: -10rem;
+}
 .product01 .ttl_wrap .ttl{
 	color: rgba(255, 255, 255, .15);
 }
@@ -1289,6 +1292,9 @@ footer .copyright{
 }
 .product01 .box_in .img{
 	width: 27%;
+}
+.product01 .box_in .img img{
+	width: 100%;
 }
 .product01 .box_in .txt{
 	width: 71%;
