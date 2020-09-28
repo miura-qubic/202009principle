@@ -95,9 +95,9 @@ section,
 }
 .ttl_wrap .fig{
 	position: absolute;
-	width: 28rem;
+	width: 22rem;
 	height: auto;
-	bottom: -3.5rem;
+	bottom: -3rem;
 	left: -13rem;
 	z-index: 1;
 }
@@ -105,16 +105,21 @@ section,
 	position: absolute;
 	top: 50%;
 	left: -3.5rem;
-	transform: translateY(-50%);
-	width: 100%;
-	white-space: nowrap;
-	text-align: center;
-	color: rgba(255,255,255,.67);
-	font-size: 4.6rem;
+	transform: translateY(-50%) translateY(-0.3rem);
+	width: 350px;
+	height: auto;
+	/* white-space: nowrap; */
+	/* text-align: center; */
+	/* color: rgba(255,255,255,.67); */
+	/* font-size: 4.6rem; */
 	z-index: 2;
 }
-.ttl_wrap.blue .ttl{
+/* .ttl_wrap.blue .ttl{
 	color: rgba(29,31,136,.15);
+} */
+.ttl_wrap .ttl img{
+	width: 100%;
+	height: auto;
 }
 .ttl_wrap p{
 	position: relative;
@@ -475,7 +480,8 @@ footer .copyright{
 
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ トップ02 ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 .top02 .ttl_wrap .fig{
-	left: -16rem;
+	bottom: -2.75rem;
+	left: -11.5rem;
 }
 .top02 .box{
 	position: relative;
@@ -508,7 +514,7 @@ footer .copyright{
 }
 .top02 .box .txt{
 	position: relative;
-	margin-top: 1.5rem;
+	margin-top: 2rem;
 	z-index: 3;
 }
 .top02 .box .txt h3{
@@ -740,9 +746,12 @@ footer .copyright{
 .top04{
 	padding: 4rem 0;
 }
-.top04 .ttl_wrap .fig{ left: -8rem; }
+.top04 .ttl_wrap .fig{
+	bottom: -2rem;
+	left: -8rem;
+}
 .top04 .box{
-	margin-top: 6rem;
+	margin-top: 5rem;
 }
 .top04 .sub_ttl{
 	position: relative;
@@ -878,12 +887,12 @@ footer .copyright{
 	z-index: 1;
 }
 .top05 .ttl_wrap .fig{
-	width: 30rem;
-	bottom: -3.1rem;
+	width: 26rem;
+	bottom: -2.25rem;
 	left: -6rem;
 }
 .top05 .box{
-	margin-top: 6rem;
+	margin-top: 4.5rem;
 	text-align: center;
 }
 .top05 .sub_ttl{
@@ -981,10 +990,11 @@ footer .copyright{
 	color: rgba(255,255,255,.15);
 }
 .top06 .ttl_wrap .fig{
-	width: 38rem;
+	width: 32rem;
+	bottom: -2.75rem;
 }
 .top06 .box{
-	margin-top: 6rem;
+	margin-top: 4.5rem;
 	text-align: center;
 }
 .top06 .sub_ttl{
@@ -1099,7 +1109,8 @@ footer .copyright{
 	padding: 5rem 0;
 }
 .top07 .ttl_wrap .fig{
-	width: 27rem;
+	width: 23rem;
+	bottom: -2.75rem;
 	left: -9rem;
 }
 .top07 .box{
@@ -1172,7 +1183,7 @@ footer .copyright{
 	padding: 5rem 0;
 }
 .top08 .ttl_wrap .fig{
-	width: 36rem;
+	width: 30rem;
 	left: -9rem;
 }
 .top08 .box{
@@ -1241,10 +1252,8 @@ footer .copyright{
 	padding: 4rem 0 8rem;
 }
 .product01 .ttl_wrap .fig{
-	left: -10rem;
-}
-.product01 .ttl_wrap .ttl{
-	color: rgba(255, 255, 255, .15);
+	bottom: -2rem;
+	left: -7.5rem;
 }
 .product01 .box{
 	position: relative;
