@@ -146,6 +146,7 @@ section,
 	font-size: 0.7rem;
 	font-weight: 500;
 	letter-spacing: 0.1em;
+	white-space: nowrap;
 }
 #pagetop p span{
 	display: inline-block;
@@ -572,7 +573,7 @@ footer .copyright{
 	padding: 0 0.25rem;
 }
 .top03 .item:first-of-type .item_in .txt{
-	width: 70%;
+	width: 80%;
 	order: 2;
 }
 .top03 .item:nth-of-type(2) .item_in .txt{
