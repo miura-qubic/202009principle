@@ -1240,6 +1240,7 @@ footer .copyright{
 	width: 75%;
 	margin: 0 auto 1rem;
 }
+.product01 .box_in .img img{ width: 100%; } 
 .product01 .box_in .txt h3{
 	font-size: 1rem;
 }
