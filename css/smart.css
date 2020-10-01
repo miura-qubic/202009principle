@@ -254,10 +254,14 @@ header .header_in nav li a span{
 
 .menu_open{
 	width: 4rem;
+	height: 4rem;
 	position: fixed;
 	right: 0;
 	margin-left: auto;
 	z-index: 99999;
+}
+header.active .menu_open{
+	background: rgba(255,241,0,.7);
 }
 .menu_open span{
 	position: absolute;
@@ -375,6 +379,7 @@ footer .copyright{
 }
 .top01 .box_in .txt h2{
 	width: 100%;
+	padding: 2rem;
 }
 .top01 .box_in .txt p{
 	position: absolute;

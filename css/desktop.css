@@ -1152,6 +1152,8 @@ footer .copyright{
 .top07 .sns_wrap .item .img{
 	border: solid 5px #1d1f88;
 	background: #fff;
+	height: 23.4rem!important;
+	overflow: hidden;
 }
 .top07 .sns_wrap .item .img img{
 	width: 100%;
