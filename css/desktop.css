@@ -719,7 +719,7 @@ footer .copyright{
 	margin-left: 1rem;
 }
 .top03 .item .txt_in{
-	margin: 0.75rem auto 0 2rem;
+	margin: 0.75rem auto 0;
 	background: rgba(255, 255, 255, .5);
 	padding: 1rem 1.5rem;
 	width: 23rem;
