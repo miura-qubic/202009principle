@@ -263,6 +263,12 @@ header .header_in nav li a span{
 header.active .menu_open{
 	background: rgba(255,241,0,.7);
 }
+.lower header.active .menu_open{
+	background: transparent;
+}
+header.active .menu_open.active{
+	background: transparent;
+}
 .menu_open span{
 	position: absolute;
 	top:50%;
@@ -691,6 +697,18 @@ footer .copyright{
 	width: 90%;
 	margin-left: auto;
 	transform: skewX(10deg);
+}
+@media screen and ( max-width:369px) {
+	.top03 .item .txt_in{ bottom: -6rem; }
+	.top03 .item .img01{ margin: 6rem auto 2rem; }
+}
+@media screen and (min-width:370px) and ( max-width:379px) {
+	.top03 .item .txt_in{ bottom: -3rem; }
+	.top03 .item .img01{ margin: 3rem auto 2rem; }
+}
+@media screen and (min-width:380px) and ( max-width:767px) {
+	.top03 .item .txt_in{ bottom: -2rem; }
+	.top03 .item .img01{ margin: 2rem auto; }
 }
 /* ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ トップ03 ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ */
 
@@ -1208,9 +1226,9 @@ footer .copyright{
 .product01 .box .bluebox{
 	position: absolute;
 	width: 14rem;
-	height: 150%;
-	bottom: 50%;
-	right: 18%;
+	height: 57rem;
+	top: -15rem;
+	left: -3.25rem;
 	transform: skewX(-10deg);
 	background: #1d1f88;
 	border-right: solid 10px #1d1f88;
