@@ -223,7 +223,7 @@ header .logo img{
 	height: auto;
 }
 header .header_in .company_name{
-	font-size: 1.2rem;
+	font-size: 1rem;
 	font-weight: 500;
 	letter-spacing: 0.1em;
 	color: #fff100;
@@ -242,7 +242,8 @@ header .header_in nav li a{
 	transform: skewX(-10deg);
 	text-align: center;
 	font-size: 0.9rem;
-	font-weight: bold;
+	font-weight: 500;
+	letter-spacing: 0.1em;
 	transition: .3s;
 }
 header .header_in nav li a::before{
@@ -268,7 +269,7 @@ header .header_in nav li a span{
 /* ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ フッター ▼▼▼▼▼▼▼▼▼▼▼▼▼▼ */
 footer{
 	background: #1d1f88;
-	padding: 3rem 0;
+	padding: 3rem 0 2rem;
 }
 footer .footer_in{
 	display: flex;
@@ -298,7 +299,7 @@ footer .footer_in nav li a{
 	transform: skewX(-10deg);
 	text-align: center;
 	font-size: 0.9rem;
-	font-weight: bold;
+	font-weight: 500;
 	letter-spacing: 0.1em;
 }
 footer .footer_in nav li a::before{
@@ -494,8 +495,9 @@ footer .copyright{
 	height: 100%;
 	background: #fff100;
 	top: 0;
-	left: -14%;
+	left: -12%;
 	transform: skewX(-10deg);
+	transform-origin: top right;
 }
 .top02 .box::after{
 	position: absolute;
@@ -504,8 +506,9 @@ footer .copyright{
 	height: 4rem;
 	background: #fff100;
 	top: -4rem;
-	left: 88.25%;
+	left: 88%;
 	transform: skewX(-10deg);
+	transform-origin: bottom left;
 }
 .top02 .box .bluebox{
 	position: absolute;
