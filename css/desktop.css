@@ -365,9 +365,9 @@ footer .copyright{
 .top01 .box_in .item{
 	position: relative;
 	display: flex;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	background: #fff100;
 	height: 40rem;
 	z-index: 1;
@@ -395,7 +395,7 @@ footer .copyright{
 	left: 50%;
 	max-width: 70rem;
 	width: 88%;
-	transform: translateX(calc(-50% + 17rem)) skewX(10deg);
+	transform: translateX(-50%)translateX(17rem) skewX(10deg);
 }
 
 .top01 .img_wrap{
@@ -1161,6 +1161,17 @@ footer .copyright{
 	border: solid 5px #1d1f88!important;
 	height: 23.4rem!important;
 	overflow: hidden;
+}
+.top07 .sns_wrap .item a.is_ie{
+	display: none !important;
+}
+@media all and (-ms-high-contrast: none) {
+	*::-ms-backdrop, .top07 .sns_wrap .item a.is_ie{
+		display: block !important;
+	}
+	*::-ms-backdrop, .top07 .sns_wrap .item .twitter-timeline{
+		display: none !important;
+	}
 }
 .top07 .sns_wrap .item .img{
 	border: solid 5px #1d1f88;
