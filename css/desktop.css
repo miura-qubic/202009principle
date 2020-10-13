@@ -375,18 +375,20 @@ footer .copyright{
 .top01 .box_in .txt{
 	width: 100%;
 	transform: skewX(10deg);
-	margin-top: 5%;
-	padding: 0 0 0 3rem;
+	/* margin-top: 5%; */
+	padding-left: 4%;
 }
 .top01 .box_in .txt h2{
-	max-width: 750px;
+	max-width: 690px;
 	/* min-width: 620px; */
-	width: 57%;
+	width: 52%;
 }
 .top01 .box_in .txt p{
 	font-size: 1.1rem;
 	font-weight: 500;
 	letter-spacing: 0.1em;
+	margin-left: 0.75rem;
+	margin-top: -1rem;
 }
 .top01 .box_in .img01{
 	position: absolute;
@@ -1135,6 +1137,7 @@ footer .copyright{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	align-items: flex-start;
 }
 .top07 .box .item{
 	width: 48%;
